@@ -1,0 +1,22 @@
+
+#查询
+db.getCollection('test').find({})
+
+#插入
+db.test.insert({
+    "startTime":new Date(),
+    "parameterData":[{
+        "userName":"18558688770",
+        "password":"1234asdf",
+        "remark":"userName and password"
+    }],
+    "status":"0",
+    "script":"",
+    "outPath":{},
+    "remarks":"300 user login information"
+})
+
+#更新
+db.test.update({"_id":ObjectId("5be04d13e3c06a85b7e529d5")},{$set:{"status":"2"}});
+
+
